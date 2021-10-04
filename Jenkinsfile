@@ -30,7 +30,7 @@ pipeline {
 				}
 			}
 			steps {
-				SWITCH = ${com.thyoun.tests.enabled}
+				//SWITCH = ${com.thyoun.tests.enabled}
 				echo 'Deloyment ready'
 				sh 'printenv'
 			}
