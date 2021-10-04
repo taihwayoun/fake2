@@ -29,6 +29,7 @@ pipeline {
 			}
 			steps {
 				echo 'Deloyment ready'
+				sh 'printenv'
 			}
 		}
 }
