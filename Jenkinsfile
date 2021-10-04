@@ -1,10 +1,10 @@
 pipeline {
 	agent any
-	def com.thyoun.tests.enabled=true
+	
 	environment { 
 		GMAIL_ID = 'thyoun1961'
 		GMAIL_PD = 'Newberry1618'
-		SWITCH = com.thyoun.tests.enabled
+		com.thyoun.tests.enabled = true
 	}
 	stages{
 		stage("build"){
@@ -30,6 +30,7 @@ pipeline {
 				}
 			}
 			steps {
+				SWITCH = ${com.thyoun.tests.enabled}
 				echo 'Deloyment ready'
 				sh 'printenv'
 			}
