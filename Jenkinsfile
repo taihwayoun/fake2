@@ -1,8 +1,10 @@
 pipeline {
 	agent any
+	def com.thyoun.tests.enabled=true
 	environment { 
 		GMAIL_ID = 'thyoun1961'
 		GMAIL_PD = 'Newberry1618'
+		SWITCH = com.thyoun.tests.enabled
 	}
 	stages{
 		stage("build"){
